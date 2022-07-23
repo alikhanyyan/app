@@ -1,0 +1,4 @@
+int solution(int divisor, int bound) 
+{
+    return floor(bound / divisor) * divisor;
+}
