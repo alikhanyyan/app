@@ -1,0 +1,5 @@
+int solution(int n) 
+{
+    int hours = floor(n / 60), minutes = n - hours * 60;
+    return hours % 10 + floor(hours / 10) + minutes % 10 + floor(minutes / 10);
+}
