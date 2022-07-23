@@ -1,0 +1,18 @@
+int solution(int min1, int min2_10, int min11, int s) 
+{
+    int duration = 0;
+    if(s >= min1)
+    {
+        s -= min1;
+        duration++;
+    }
+    while (s >= min2_10 && duration > 0 && duration < 10) {
+        duration++;
+        s -= min2_10;
+    }
+    while (s >= min11 && duration >= 10) {
+        duration++;
+        s -= min11; 
+    }
+    return duration;
+}
