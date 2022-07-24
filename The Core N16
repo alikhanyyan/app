@@ -1,0 +1,7 @@
+vector<int> solution(int lastNumberOfDays) 
+{
+    if(lastNumberOfDays == 28 || lastNumberOfDays == 30)
+        return {31};
+    else 
+        return {28, 30, 31};
+}
