@@ -1,0 +1,19 @@
+int solution(int a) 
+{
+    int number = 0, quantity = 0, b = a, count = 0;
+    // quantity is the number of bits
+    // count is the number of moved bits
+    // b is the same as a
+    while(b)
+    {
+        b = b >> 1;
+        quantity++;
+    }
+    while(a)
+    {
+        count++;
+        number += (a & 1) << (quantity - count);
+        a = a >> 1;
+    }
+    return number;
+}
