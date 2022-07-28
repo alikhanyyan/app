@@ -1,0 +1,7 @@
+int solution(int a, int b, int n) 
+{
+    int money = 0;
+    for(int i = 0; i < n; i++)
+        money += a++ * b++;
+    return money;
+}
