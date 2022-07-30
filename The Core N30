@@ -1,0 +1,9 @@
+int solution(int k) 
+{
+    int answer = 0;
+    for(int i = 1; i <= k; i += 2)
+        answer -= i * i;
+    for(int i = 2; i <= k; i += 2)
+        answer += i * i;
+    return answer;        
+}
