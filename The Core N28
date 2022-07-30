@@ -1,0 +1,18 @@
+int solution(string commands) 
+{
+    int quantity = 0, side = 0;
+    // when the side is divided into 2 it means that the students are facing or back
+    for(int i = 0; i < commands.size(); i++)
+    {
+        if (commands[i] == 'L')
+            side--;
+        else if (commands[i] == 'R')
+            side++;
+        else
+            side += 2;
+        if (side % 2 == 0)
+            quantity++;
+            
+    }
+    return quantity;
+}
