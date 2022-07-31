@@ -1,0 +1,10 @@
+int solution(int candlesNumber, int makeNew) 
+{
+    int quantity = candlesNumber;
+    while (candlesNumber >= makeNew)
+    {
+        candlesNumber -= makeNew - 1;
+        quantity++;
+    }
+    return quantity;
+}
