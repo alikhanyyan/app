@@ -1,0 +1,13 @@
+int solution(int n) 
+{
+    int i = 1;
+    while (n / i > 9)
+    {
+        i  *= 10;
+        if(n % i < 5 * i / 10)
+            n  =  int(n / i) * i;
+        else 
+            n = int(n / i + 1) * i;
+    }
+    return n;
+}
