@@ -1,0 +1,10 @@
+char solution(string s) 
+{
+    for(int i = 0; i < s.size(); i++)
+        for(int j = 0; j < s.size(); j++)
+            if (s[i] == s[j] && i != j)
+                break;
+            else if (j == s.size() - 1)
+                return s[i];
+    return '_';
+}
