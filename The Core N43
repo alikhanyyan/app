@@ -1,0 +1,14 @@
+bool solution(int n) 
+{
+    if (n == 1)
+        return true;
+    for(int i = 2; i <= 20; i++) 
+    {
+        int number = i * i;
+        while (number < n) 
+            number *= i;
+        if (number == n)
+            return true;
+    }
+    return false;
+}
