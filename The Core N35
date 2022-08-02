@@ -1,0 +1,5 @@
+vector<int> solution(int size) 
+{
+    vector<int> array(size, 1);
+    return array;
+}
