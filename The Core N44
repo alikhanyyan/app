@@ -1,0 +1,14 @@
+int solution(int n) 
+{
+    int quantity = 0;
+    for(int i = 1; i <= n; i++)
+    {
+        int number = 2 * i + 1;
+        int j = i + 2;
+        while(number < n)
+            number = number + j++;
+        if (number == n)
+            quantity++;
+    }
+    return quantity;
+}
