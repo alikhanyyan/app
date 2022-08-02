@@ -1,0 +1,6 @@
+vector<int> solution(vector<int> arr) 
+{
+    if(arr.size() > 1)
+        swap(arr[0], arr[arr.size() - 1]);
+    return arr;
+}
