@@ -1,0 +1,24 @@
+string solution(string inputString) 
+{
+    stack<int> index;
+    // stack index stores indexes of opening brackets
+    int quantity = 0;
+    // quantity is the number of brackets
+    for (int i = 0; i < inputString.size(); i++)
+        if (inputString[i] == '(')
+        {
+            index.push(i);
+            quantity++;
+        }
+        else if (inputString[i] == ')') 
+        {
+            reverse(inputString.begin() + index.top() + 1, inputString.begin() + i);
+            index.pop();
+        }
+    for(int i = 0; i < quantity; i++)
+    {
+        inputString.erase(inputString.find("("), 1);
+        inputString.erase(inputString.find(")"), 1);
+    }
+    return inputString;
+}
