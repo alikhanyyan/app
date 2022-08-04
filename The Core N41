@@ -1,0 +1,10 @@
+vector<int> solution(vector<int> arr) 
+{
+    int middle;
+    if (arr.size() % 2 == 0)
+    {
+        arr[arr.size() / 2 - 1] += arr[arr.size() / 2];
+        arr.erase(arr.begin() + arr.size() / 2);
+    }
+	return arr;
+}
