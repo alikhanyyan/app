@@ -1,0 +1,11 @@
+int solution(vector<int> inputArray) 
+{
+    int quantity = 0;
+    for(int i = 1; i < inputArray.size(); i++)
+        while (inputArray[i] <= inputArray[i - 1]) 
+        {
+            inputArray[i]++;
+            quantity++;
+        }
+    return quantity;
+}
