@@ -1,0 +1,5 @@
+int solution(vector<int> statues) 
+{
+    sort(statues.begin(), statues.end());
+    return statues.back() - statues.front() - statues.size() + 1;
+}
