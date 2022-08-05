@@ -1,0 +1,17 @@
+int solution(int current, int numberOfDigits) 
+{
+    int num = 0, answer = current;
+    while (numberOfDigits >= num)
+    {
+        num = 0;
+        while(current > 0)
+        {
+            num++;
+            current /= 10;
+        }
+        answer++;
+        current = answer;
+        numberOfDigits -= num;
+    }
+    return answer - 1;
+}
