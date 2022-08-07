@@ -1,0 +1,5 @@
+bool solution(vector<int> a) 
+{
+    set<int> array(a.begin(), a.end());
+    return array.size() != a.size();
+}
