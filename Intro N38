@@ -1,0 +1,10 @@
+int solution(int upSpeed, int downSpeed, int desiredHeight) 
+{
+    int height = upSpeed, days = 1;
+    while (height < desiredHeight)
+    {
+        height = height + upSpeed - downSpeed;
+        days++;
+    }
+    return days;
+}
