@@ -1,0 +1,16 @@
+int solution(int n) 
+{
+    int quantity = 0, nCopy;
+    while (n > 9)
+    {
+        nCopy = n;
+        n = 0;
+        while (nCopy > 0)
+        {
+            n += nCopy % 10;
+            nCopy /= 10;
+        }
+        quantity++;
+    }
+    return quantity;
+}
