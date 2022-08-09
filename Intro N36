@@ -1,0 +1,5 @@
+int solution(string s) 
+{
+    set<char> array(s.begin(), s.end()); 
+    return array.size();
+}
