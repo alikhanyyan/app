@@ -1,0 +1,9 @@
+string solution(string inputString) 
+{
+    string prefix;
+    for(int i = 0; i < inputString.size(); i++)
+        if(isdigit(inputString[i]))
+            prefix += inputString[i];
+        else
+            return prefix;
+}
