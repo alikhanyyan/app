@@ -1,0 +1,14 @@
+int solution(vector<int> inputArray, int k) 
+{
+    int max = 0;
+    for(int i = 0; i < k; i++)
+        max += inputArray[i];
+    int test = max;
+    for(int i = k; i <= inputArray.size() - 1; i++)
+    {
+        test = test - inputArray[i - k] + inputArray[i];
+        if (test > max)
+            max = test;
+    }
+    return max;
+}
