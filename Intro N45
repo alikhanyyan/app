@@ -1,0 +1,10 @@
+string solution(string st) 
+{
+    int i = 0;
+    while (st != string(st.rbegin(), st.rend())) 
+    {
+        st.insert(st.end() - i, st[i]);
+        i++;
+    }
+    return st;
+}
