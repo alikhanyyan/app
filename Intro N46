@@ -1,0 +1,15 @@
+int solution(vector<int> votes, int k) 
+{
+    int max = *max_element(votes.begin(), votes.end()), quantity = 0;        
+    if (k == 0)
+    {
+        if (count(begin(votes), end(votes), max) == 1)
+            return 1;
+        else
+            return 0;
+    }
+    for(int i = 0; i < votes.size(); i++)
+        if (votes[i] + k > max)
+            quantity++;
+    return quantity;
+}
