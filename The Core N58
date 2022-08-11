@@ -1,0 +1,7 @@
+bool solution(string filename1, string filename2) 
+{
+    string a, b;
+    transform(begin(filename1), end(filename1), back_inserter(a), ::tolower);
+    transform(begin(filename2), end(filename2), back_inserter(b), ::tolower);
+    return (filename1 > filename2) != (a > b);
+}
