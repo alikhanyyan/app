@@ -1,0 +1,4 @@
+string solution(string startTag) 
+{
+    return "</" + startTag.substr(1, startTag.find_first_of("> ") - 1) + ">";
+}
