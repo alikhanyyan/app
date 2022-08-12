@@ -1,0 +1,13 @@
+int solution(string s, string t) 
+{
+    int quantity = t.size();
+    for(int i = 0; i < t.size(); i++)
+        for(int j = 0; j < s.size(); j++)
+            if (t[i] == s[j])
+            {
+                s.erase(s.find(t[i]), 1);
+                quantity--;
+                break;
+            }
+    return quantity;
+}
