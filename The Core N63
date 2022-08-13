@@ -1,0 +1,21 @@
+int solution(vector<int> a) 
+{
+    sort(a.begin(), a.end(), greater<>());
+    int quantity = a.size(), i = 0;
+    while (a.size() > 0)
+    {
+        int count = 0;
+        for(int j = a.size() - 1; j >= 0; j--)
+            if (a[a.size() - 1] >= i * pow(10, 4) + 1 && a[a.size() - 1] <= (i + 1) * pow(10, 4))
+            {
+                count++;
+                a.pop_back();
+            }
+            else  
+                break;
+        if (count != 0)
+            quantity++;
+        i++;
+    }
+    return quantity;
+}
