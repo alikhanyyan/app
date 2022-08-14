@@ -1,0 +1,9 @@
+int solution(vector<int> inputArray) 
+{
+    int sum = 0;
+    for(int i = 0; i < inputArray.size(); i++)
+        if (inputArray[i] != 0)
+            sum += inputArray[i];
+        else  
+            return sum;
+}
