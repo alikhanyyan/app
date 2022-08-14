@@ -1,7 +1,7 @@
 vector<string> solution(vector<string> inputArray) 
 {
     vector<string> array;
-    int max = inputArray[0].length(), k = -1;
+    int max = inputArray[0].length();
     for(int i = 1; i < inputArray.size(); i++)
         if(inputArray[i].size() >= max)
             max = inputArray[i].size();
