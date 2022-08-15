@@ -1,0 +1,15 @@
+int solution(string inputString) 
+{
+    int sum = 0;
+    for (int i = 0; i < inputString.size(); i++)
+    {
+        int number = 0;
+        while (isdigit(inputString[i]))
+        {
+            number = number * 10 + inputString[i] - '0';
+            i++;
+        }
+        sum += number;
+    }
+    return sum;
+}
