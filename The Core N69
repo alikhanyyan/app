@@ -1,0 +1,8 @@
+vector<int> solution(int legs) 
+{
+    vector<int> answer;
+    for(int i = legs; i >= 0; i -= 2)
+        if(i % 4 == 0)
+            answer.push_back((legs - i) / 2);
+    return answer;
+}
