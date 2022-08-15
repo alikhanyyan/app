@@ -1,0 +1,8 @@
+int solution(vector<vector<int>> matrix) 
+{
+    set<int> smallSquares;
+    for(int i = 0; i < matrix.size() - 1; i++)
+        for(int j = 0; j < matrix[i].size() - 1; j++)
+            smallSquares.insert(matrix[i][j] + matrix[i + 1][j] * 10 + matrix[i][j + 1] * 100 + matrix[i + 1][j + 1] * 1000);
+    return smallSquares.size();
+}
