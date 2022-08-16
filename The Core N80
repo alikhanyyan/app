@@ -1,0 +1,9 @@
+string solution(char symbol) 
+{
+    if (!isdigit(symbol))
+        return "not a digit";
+    else if ((int)symbol % 2 == 0)
+        return "even";
+    else
+        return "odd";
+}
