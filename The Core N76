@@ -1,0 +1,10 @@
+string solution(int number, int width) 
+{
+    string answer(width, '0');
+    for(int i = answer.size() - 1; i >= 0; --i)
+    {
+        answer[i] = number % 10 + '0';
+        number /= 10;
+    }
+    return answer;
+}
