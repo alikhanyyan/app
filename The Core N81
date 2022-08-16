@@ -1,0 +1,6 @@
+string solution(string inputString) 
+{
+    for (int i = 0; i < inputString.size(); i++)
+        inputString[i] = 219 - inputString[i];
+    return inputString;
+}
