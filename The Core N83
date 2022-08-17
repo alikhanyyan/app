@@ -1,0 +1,14 @@
+string solution(string message) 
+{
+    string answer = "";
+    answer += message[0];
+    int previous = message[0] - 'a';
+    for(int i = 1; i < message.size(); i++)
+        for(int j = 0; j < 26; j++)
+            if((previous + j) % 26 == message[i] - 'a')
+            {
+                previous += j;
+                answer += (j + 'a');
+            }
+    return answer;
+}
