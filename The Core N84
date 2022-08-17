@@ -1,0 +1,9 @@
+string solution(string note) 
+{
+    for(int i = 0; i < note.length(); i++)
+        if (isdigit(note[i]))
+            note[i] = note[i] - '0' + 'a';
+        else if (note[i] >= 'a' && note[i] <= 'j') 
+            note[i] = note[i] - 'a' + '0';
+    return note;
+}
