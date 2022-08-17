@@ -1,0 +1,7 @@
+vector<string> solution(char number) 
+{
+    vector<string> answer;
+    for(int i = 0; i <= (number - 65) / 2; i++)
+        answer.push_back({'A'+i, ' ', '+', ' ', number-i});
+    return answer;
+}
