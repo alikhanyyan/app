@@ -1,0 +1,18 @@
+int solution(vector<int> inputArray) 
+{
+    int count = 1;
+    while (inputArray.size() > 1)
+    {
+        vector<int> array;
+        if (count % 2 != 0)
+            for(int i = 0; i < inputArray.size(); i += 2)
+                array.push_back(inputArray[i] + inputArray[i + 1]);
+        else
+            for(int i = 0; i < inputArray.size(); i += 2)
+                array.push_back(inputArray[i] * inputArray[i + 1]);
+        inputArray = array;
+        inputArray.resize(array.size());
+        count++;
+    }
+    return inputArray[0];
+}
