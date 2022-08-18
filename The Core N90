@@ -1,0 +1,19 @@
+bool solution(vector<vector<int>> shoes) 
+{
+    if (shoes.size() % 2 != 0)
+        return false;
+    for(int i = 0; i < shoes.size(); i++) 
+        if (shoes[i][1] != 0)
+            for(int j = i + 1; j < shoes.size(); j++) 
+            {
+                if (shoes[i][0] + shoes[j][0] == 1 && shoes[i][1] == shoes[j][1]) 
+                {
+                    shoes[i][1] = 0;
+                    shoes[j][1] = 0;
+                    break;
+                }
+                else if (j == shoes.size() - 1)
+                    return false;  
+            }
+    return true;
+}
