@@ -1,0 +1,7 @@
+vector<int> solution(vector<vector<int>> matrix, int column) 
+{
+    vector<int> array;
+    for(int i = 0; i < matrix.size(); i++)
+        array.push_back(matrix[i][column]);
+    return array;
+}
