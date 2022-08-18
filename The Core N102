@@ -1,0 +1,9 @@
+int solution(vector<vector<int>> matrix, int a, int b) 
+{
+    int sum = 0;
+    for(int i = 0; i < matrix[0].size(); i++)
+        sum += matrix[a][i];
+    for(int i = 0; i < matrix.size(); i++)
+        sum += matrix[i][b];
+    return sum - matrix[a][b];
+}
