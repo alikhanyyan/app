@@ -1,0 +1,10 @@
+vector<int> solution(vector<int> a)
+{
+    vector<int> aCopy = a;
+    sort(aCopy.begin(), aCopy.end());
+    int k = aCopy.size() - 1;
+    for(int i = a.size() - 1; i >= 0; i--)
+        if (a[i] != - 1)
+            a[i] = aCopy[k--];
+    return a;
+}
