@@ -1,0 +1,12 @@
+vector<int> solution(vector<int> shuffled) 
+{
+    int sum = accumulate(shuffled.begin(), shuffled.end(), 0);
+    for(int i = 0; i < shuffled.size(); i++)
+        if (sum == shuffled[i] * 2)
+        {
+            shuffled.erase(shuffled.begin() + i);
+            break;
+        }
+    sort(shuffled.begin(), shuffled.end());
+    return shuffled;
+}
