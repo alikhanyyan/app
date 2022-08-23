@@ -1,15 +1,7 @@
 bool solution(string inputString) 
 {
-    char string[100001] = "";
-	strcpy(string, inputString.c_str());
-	int quantity = 0, length = strlen(string);
-	for (int i = 0; i < length / 2; i++)
-		if (string[i] == string[length - i - 1])
-			quantity++;
-		else
-			break;
-    if(quantity == length / 2)
-        return true;
-    else
-        return false;
+	for (int i = 0; i < inputString.length() / 2; i++)
+		if (inputString[i] != inputString[inputString.length() - i - 1])
+			return false;
+	return true;    
 }
