@@ -1,8 +1,4 @@
 int solution(int year) 
 {
-    double century = double(year) / 100;
-    if (century == int(century))
-        return century;
-    else 
-        return ceil(century);
+    return (year - 1) / 100 + 1;
 }
