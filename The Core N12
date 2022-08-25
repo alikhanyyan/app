@@ -1,9 +1,4 @@
 bool solution(int a, int b) 
 {
-    if(a > b)
-        return true;
-    else if((b - a) % 2 == 1)
-        return true;
-    else
-        return false;
+    return (a > b) || ((b - a) % 2 == 1);
 }
