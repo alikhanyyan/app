@@ -1,4 +1,4 @@
 bool solution(bool young, bool beautiful, bool loved) 
 {
-    return (beautiful && young && !loved) || ((!beautiful || !young) && loved);
+    return (beautiful && young) != loved;
 }
