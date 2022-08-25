@@ -1,0 +1,9 @@
+string solution(string inputString) 
+{
+    for(int i = 0; i < inputString.size(); i++)
+        if (inputString[i] != 'z')
+            inputString[i] += 1;
+        else
+            inputString[i] = 'a';
+    return inputString;
+}
