@@ -1,6 +1,6 @@
 bool solution(string name) 
 {
-    if(isdigit(name[0]) || name[0] == ' ')
+    if(isdigit(name[0]))
         return false;
     for(int i = 0; i < name.length(); i++)
         if(!isdigit(name[i]) && !isalpha(name[i]) && name[i] != '_')
