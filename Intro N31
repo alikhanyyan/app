@@ -1,9 +1,10 @@
 int solution(int deposit, int rate, int threshold) 
 {
     int years = 0;
-    while (deposit < threshold) 
+    double depositCopy = deposit;
+    while (depositCopy < threshold) 
     {
-        deposit += deposit * rate / 100;
+        depositCopy += depositCopy * rate / 100;
         years++;
     }
     return years;
