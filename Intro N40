@@ -1,9 +1,7 @@
 string solution(string inputString) 
 {
-    string prefix;
     for(int i = 0; i < inputString.size(); i++)
-        if(isdigit(inputString[i]))
-            prefix += inputString[i];
-        else
-            return prefix;
+        if(!isdigit(inputString[i]))
+            return inputString.substr(0, i);
+    return inputString;
 }
