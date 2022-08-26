@@ -1,0 +1,20 @@
+bool solution(string inputString) 
+{
+    int count = 0;
+    for (int i = 0; i < inputString.size(); i++)
+        if (!isdigit(inputString[i]) && inputString[i] != '.') 
+            return false;
+    for (int i = 0; i < inputString.size(); i++) 
+    {
+        string num = "";
+        while (isdigit(inputString[i])) 
+        {
+            num += inputString[i];
+            i++;
+        }
+        count++; 
+        if (num.size() < 1 || num.size() > 3 || (num.size() > 1 && num[0] == '0') || stoi(num) > 255) 
+                return false;
+    }
+    return count == 4;
+}
