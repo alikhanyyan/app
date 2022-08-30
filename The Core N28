@@ -11,8 +11,7 @@ int solution(string commands)
         else
             side += 2;
         if (side % 2 == 0)
-            quantity++;
-            
+            quantity++; 
     }
     return quantity;
 }
