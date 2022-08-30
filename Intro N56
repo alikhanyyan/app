@@ -6,11 +6,11 @@ int solution(int product)
         return product;
     for(int i = 25; i <= 9999; i++)
     {
-        int n = i, num = 1;
-        while (n > 0)
+        int test = i, num = 1;
+        while (test > 0)
         {
-            num *= n % 10;
-            n /= 10;
+            num *= test % 10;
+            test /= 10;
         }
         if (num == product)
             return i;
