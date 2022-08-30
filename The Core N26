@@ -1,19 +1,11 @@
 int solution(int n, int l, int r) 
 {
-    int quantity = 0, i = 0;
-    if(n % 2 == 0)
-        while(n / 2 - i >= l && n / 2 + i <= r)
-        {
-            if(n / 2 - i + n / 2 + i == n)
-                quantity++;
-            i++;
-        }
-    else 
-        while(int(n / 2) - i - 1 >= l && int(n / 2) + i + 1 <= r)
-        {
-            if(int(n / 2) - i + int(n / 2) + i + 1 == n)
-                quantity++;
-            i++;
-        }
-    return quantity;
+    int A = n / 2, B = n / 2 + n % 2, count = 0;
+    while (A >= l && B <= r)
+    {
+        A--;
+        B++;
+        count++;
+    }
+    return count;
 }
