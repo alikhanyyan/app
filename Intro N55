@@ -1,5 +1,7 @@
 int solution(vector<vector<int>> matrix) 
 {
+    if (matrix.size() < 2 || matrix[0].size() < 2)
+        return 0;
     set<int> smallSquares;
     for(int i = 0; i < matrix.size() - 1; i++)
         for(int j = 0; j < matrix[i].size() - 1; j++)
