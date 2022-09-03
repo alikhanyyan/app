@@ -1,0 +1,14 @@
+bool solution(string inputString) 
+{
+    if (inputString.length() != 17)
+        return false;
+    for (int i = 0; i < inputString.length(); i++)
+        if (i % 3 == 2)
+        {
+            if (inputString[i] != '-')
+                return false;
+        }
+        else if (!((inputString[i] >= '0' && inputString[i] <= '9') || (inputString[i] >= 'A' && inputString[i] <= 'F')))
+            return false;
+    return true;
+}
