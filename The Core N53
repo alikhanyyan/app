@@ -1,0 +1,4 @@
+bool solution(string str) 
+{
+    return str.substr(0, str.size() / 2) == str.substr(str.size() / 2);
+}
